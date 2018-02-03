@@ -120,7 +120,12 @@ body {
     text-align: left;
     color: var(--color-content-text);
     font-weight: 900;
-    background-color: var(--color-content-background);
+    background:  var(--color-content-background);
+}
+
+#content .content-index
+{
+    height: 555px;
 }
 
 #content h2 {
