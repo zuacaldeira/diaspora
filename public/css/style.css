@@ -49,15 +49,16 @@ body {
 }
 
 #navi h1 {
-    width: 290px;
+    min-width: 290px;
     position: absolute;
     top: 560px;
     z-index: 10;
     color: var(--color-navi-author);
     font-size: 19px;
     text-shadow: 0 0 20px var(--color-content-text);
-    transform: rotate(-90deg) translate(120px, 110px);
     text-transform: uppercase;
+    transform: rotate(-90deg) translate(120px, 110px);
+    background-color: rgba(0,0,0,.5);
 }
 
 
@@ -100,7 +101,7 @@ body {
 {
     position: absolute;
     top: 388px;
-    left: 100px;
+    left: 128px;
     z-index: 0;
     border: 1px solid var(--color-navi-author);
 }
@@ -123,9 +124,9 @@ body {
     background:  var(--color-content-background);
 }
 
-#content .content-index
+#content .content-no-background
 {
-    height: 555px;
+    background-color: none;
 }
 
 #content h2 {
