@@ -2,15 +2,15 @@
 
 :root {
     --color-navi-background: none;
-    --color-navi-link: lightgray;
-    --color-navi-link-hover: yellow;
-    --color-navi-link-active: yellow;
-    --color-navi-author: yellow;
-    --color-page: black;
-    --color-content-background: yellow;
-    --color-content-text: black;
-    --color-footer: lightgray;
-    --ff: 'Monaco';
+    --color-navi-link: DARKgray;
+    --color-navi-link-hover: rgba(150,205,50,1);
+    --color-navi-link-active: var(--color-navi-link-hover);
+    --color-navi-author: var(--color-navi-link-hover);
+    --color-page: almond;
+    --color-content-background: var(--color-navi-link-hover);
+    --color-content-text: var(--color-page);
+    --color-footer: var(--color-navi-link);
+    --ff: 'Dosis', sans-serif;
 }
 
 * {
@@ -32,7 +32,7 @@ body {
     height: 600px;
     margin: 50px auto;
     font-family: var(--ff);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* Header */
@@ -51,14 +51,13 @@ body {
 #navi h1 {
     min-width: 290px;
     position: absolute;
-    top: 560px;
+    top: 559px;
     z-index: 10;
     color: var(--color-navi-author);
-    font-size: 19px;
-    text-shadow: 0 0 20px var(--color-content-text);
+    font-size: 18px;
     text-transform: uppercase;
     transform: rotate(-90deg) translate(120px, 110px);
-    background-color: rgba(0,0,0,.5);
+    //background-color: rgba(0,0,0,.5);
 }
 
 
@@ -67,7 +66,7 @@ body {
     position: absolute;
     z-index: 20;
     top: -10px;
-    left: 40px;
+    left: 0px;
     list-style: none;
     width: 270px;
     text-align: right;
@@ -86,7 +85,6 @@ body {
 #navi ul li a:visited {
     text-decoration: none;
     color: var(--color-navi-link);
-    padding-right: 40px;
 }
 
 #navi ul li a:hover {
@@ -95,15 +93,16 @@ body {
 
 #navi ul li.active a  {
     color: var(--color-navi-link-active);
+    font-weight: bold;
 }
 
 .author
 {
     position: absolute;
-    top: 388px;
-    left: 128px;
+    top: 386px;
+    left: 126px;
     z-index: 0;
-    border: 1px solid var(--color-navi-author);
+    border: 2px solid var(--color-navi-author);
 }
 
 /* Content */
@@ -145,7 +144,7 @@ body {
 #footer {
     position: absolute;
     z-index: 40;
-    top: 605px;
+    top: -25px;
     left: 280px;
     color: var(--color-footer);
 }
@@ -156,7 +155,6 @@ body {
 
 #footer ul li {
     display: inline;
-    padding-right: 10px;
 }
 
 #footer ul li:last-child {
@@ -171,9 +169,15 @@ body {
     text-decoration: none;
     color: var(--color3);
     font-size: 12px;
+    text-transform: uppercase;
 }
 
-#footer ~ ul li a:hover {
-    text-transform: uppercase;
-    color: var(--color-navi-background);
+#footer ul li a:hover {
+    color: var(--color-navi-link-hover);
 }
+
+#footer ul li.active a  {
+    color: var(--color-navi-link-active);
+    font-weight: bold;
+}
+
