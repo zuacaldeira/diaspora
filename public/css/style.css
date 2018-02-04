@@ -2,12 +2,13 @@
 
 :root {
     --color-navi-background: none;
+    --color-content-background: rgba(150,205,50,1);
     --color-navi-link: DARKgray;
-    --color-navi-link-hover: rgba(150,205,50,1);
+    --color-navi-link-hover: var(--color-content-background);
     --color-navi-link-active: var(--color-navi-link-hover);
     --color-navi-author: var(--color-navi-link-hover);
-    --color-page: almond;
-    --color-content-background: var(--color-navi-link-hover);
+    --color-page: black;
+    --color-wrapper: var(--color-page);
     --color-content-text: var(--color-page);
     --color-footer: var(--color-navi-link);
     --ff: 'Dosis', sans-serif;
@@ -33,6 +34,7 @@ body {
     margin: 50px auto;
     font-family: var(--ff);
     letter-spacing: 2px;
+    background-color: var(--color-wrapper);
 }
 
 /* Header */
@@ -46,6 +48,7 @@ body {
     height: 600px;
     background-color: var(--color-navi-background);
     padding: 0px 0px 0 10px;
+    font-weight: bold;
 }
 
 #navi h1 {
@@ -71,7 +74,6 @@ body {
     width: 270px;
     text-align: right;
     padding-top: 10px;
-    font-size: 12px;
 }
 
 #navi ul li {
@@ -84,6 +86,7 @@ body {
 #navi ul li a:hover,
 #navi ul li a:visited {
     text-decoration: none;
+    font-size: 14px;
     color: var(--color-navi-link);
 }
 
@@ -168,7 +171,7 @@ body {
 #footer ul li a:visited {
     text-decoration: none;
     color: var(--color3);
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
